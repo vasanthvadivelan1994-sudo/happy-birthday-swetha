@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Swetha 🎂</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: #0f172a;
+      overflow-x: hidden
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      /* background: linear-gradient(-45deg, #0f172a, #1e293b, #312e81, #0f172a); */
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+      background-size: 400% 400%;
+      animation: grad 15s ease infinite
+    }
+
+    @keyframes grad {
+      0% {
+        background-position: 0 50%
+      }
+
+      50% {
+        background-position: 100% 50%
+      }
+
+      100% {
+        background-position: 0 50%
+      }
+    }
+
+    .float {
+      position: fixed;
+      bottom: -50px;
+      animation: rise linear forwards;
+      opacity: .7
+    }
+
+    @keyframes rise {
+      to {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0
+      }
+    }
+
+    section {
+      padding: 80px 10%
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center
+    }
+
+    .hero h1 {
+      font-size: 4rem
+    }
+
+    .hero button,
+    .btn {
+      padding: 14px 28px;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: bold
+    }
+
+    .hero button {
+      margin-top: 20px
+    }
+
+    .card {
+      background: rgba(255, 255, 255, .08);
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      border-radius: 20px
+    }
+
+    .story {
+      display: grid;
+      gap: 25px
+    }
+
+    .story-item {
+      display: flex;
+      gap: 20px;
+      align-items: center
+    }
+
+    .story-item img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 20px
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 15px
+    }
+
+    #questionSection {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    #qCard {
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+      padding: 40px;
+      border-radius: 30px
+    }
+
+    #buttons {
+      margin-top: 30px;
+      display: flex;
+      gap: 20px;
+      justify-content: center
+    }
+
+    .playlist a {
+      display: inline-block;
+      padding: 15px 25px;
+      background: red;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 30px
+    }
+
+    #final {
+      display: none;
+      text-align: center
+    }
+
+    @media(max-width:768px) {
+      .hero h1 {
+        font-size: 2.5rem
+      }
+
+      .story-item {
+        flex-direction: column
+      }
+
+      .story-item img {
+        width: 100%
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bg"></div>
+
+  <section class="hero">
+    <h1>Happy Birthday Swetha 🎂</h1>
+    <p>A small birthday journey created by Vasanth</p>
+    <button onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">Start Journey ✨</button>
+  </section>
+
+  <section id="story">
+    <h2>📖 Friendship Timeline</h2><br>
+    <div class="story">
+      <div class="story-item card"><img src="images/selfie1.jpg">
+        <p>The beginning of a memorable friendship.</p>
+      </div>
+      <div class="story-item card"><img src="images/selfie2.jpg">
+        <p>One random selfie, countless laughs.</p>
+      </div>
+      <div class="story-item card"><img src="images/selfie3.jpg">
+        <p>A normal day that became a favorite memory.</p>
+      </div>
+      <div class="story-item card"><img src="images/selfie4.jpg">
+        <p>More memories, more stories.</p>
+      </div>
+      <div class="story-item card"><img src="images/selfie5.jpg">
+        <p>Proof that good company makes everything better.</p>
+      </div>
+      <div class="story-item card"><img src="images/selfie6.jpg">
+        <p>Another memory worth keeping forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>🌟 Swetha Spotlight</h2><br>
+    <div class="gallery">
+      <img src="images/her1.jpg"><img src="images/her2.jpg"><img src="images/her3.jpg">
+      <img src="images/her4.jpg"><img src="images/her5.jpg"><img src="images/her6.jpg">
+      <img src="images/her7.jpg">
+    </div>
+  </section>
+
+  <section class="playlist" style="text-align:center">
+    <h2>🎵 Birthday Playlist</h2><br>
+    <a target="_blank"
+      href="https://youtube.com/playlist?list=PLKVaMUGMKB2_8uNw5eGAUcRe0ycr5FiLa&si=SPeIFxEdE1BIUCXC">Open Playlist
+      ❤️</a>
+  </section>
+
+  <section id="questionSection">
+    <div id="qCard" class="card">
+      <h2 id="question"></h2>
+      <div id="buttons"></div>
+    </div>
+  </section>
+
+  <section id="final">
+    <h1>🎉 Happy Birthday Swetha 🎉</h1><br>
+    <p>Thank you for being such an awesome friend.</p><br>
+    <p>✨ Happiness • 🎯 Success • 🌸 Good Health • 📸 Wonderful Memories • 🎂 Lots of Cake</p>
+    <br>
+    <h3>— Vasanth</h3><br>
+    <div class="gallery">
+      <img src="images/selfie1.jpg"><img src="images/selfie2.jpg"><img src="images/selfie3.jpg">
+      <img src="images/selfie4.jpg"><img src="images/selfie5.jpg"><img src="images/selfie6.jpg">
+      <img src="images/her1.jpg"><img src="images/her2.jpg"><img src="images/her3.jpg">
+      <img src="images/her4.jpg"><img src="images/her5.jpg"><img src="images/her6.jpg"><img src="images/her7.jpg">
+    </div>
+  </section>
+
+  <script>
+    const items = ['🎈', '🎁', '⭐', '✨', '🎂', '🌸', '☁️'];
+    setInterval(() => {
+      const e = document.createElement('div');
+      e.className = 'float';
+      e.innerText = items[Math.floor(Math.random() * items.length)];
+      e.style.left = Math.random() * 100 + 'vw';
+      e.style.fontSize = (20 + Math.random() * 20) + 'px';
+      e.style.animationDuration = (8 + Math.random() * 6) + 's';
+      document.body.appendChild(e);
+      setTimeout(() => e.remove(), 15000);
+    }, 600);
+
+    const questions = [
+      "Do you agree today belongs entirely to you? 🎂",
+      "Should birthdays come twice a year for you? 😌",
+      "Are you accepting unlimited cake today? 🍰",
+      "Should good luck follow you everywhere? ✨",
+      "Do you deserve an amazing year ahead? 🌸",
+      "Should we create even more memories this year? 📸",,
+      "Hey swethaaaa... Enaku treat undaa girl? 🤔",
+      "Are you one of the coolest people I know? 😎",
+      "Can I officially wish you the happiest birthday ever? 🎉",
+      "Do mirrors ever get nervous when you walk by? 😏",
+      "Should the government declare today as your holiday? 🤭",
+      "Would you like unlimited chocolate for life? 🍫😋",
+      "Do you agree you're impossible to ignore? 😎✨",
+      "Should your birthday be celebrated for an entire week? 🎉🥳",
+      "Are you the main character today? 🎬😌",
+      "Loosu payaleay... one plus maranthutala? 😔",
+      "Are you prettier than yesterday? 😍"
+    ];
+
+    const themes = [
+      ["#ff758c", "#ff1744"], ["#00c896", "#00c853"], ["#2196f3", "#1976d2"],
+      ["#7c4dff", "#512da8"], ["#ff9800", "#ef6c00"], ["#26a69a", "#00897b"],
+      ["#ec407a", "#d81b60"], ["#66bb6a", "#2e7d32"]
+    ];
+
+    let q = 0;
+    const qText = document.getElementById("question");
+    const btns = document.getElementById("buttons");
+    const qCard = document.getElementById("qCard");
+
+    function renderQuestion() {
+      qText.textContent = questions[q];
+      qCard.style.background = `linear-gradient(135deg,${themes[q][0]},#ffffff22)`;
+      btns.innerHTML = '';
+
+      const yes = document.createElement('button');
+      yes.className = 'btn';
+      yes.innerText = 'YES 😊';
+      yes.style.background = themes[q][1];
+      yes.style.color = 'white';
+      yes.style.borderRadius = (15 + q * 5) + 'px';
+
+      const no = document.createElement('button');
+      no.className = 'btn';
+      no.innerText = 'NO 😒';
+      no.style.background = '#fff';
+      no.style.color = '#111';
+
+      no.addEventListener('mouseenter', () => {
+        const x = Math.random() * (window.innerWidth - 120);
+        const y = Math.random() * (window.innerHeight - 60);
+        no.style.position = 'fixed';
+        no.style.left = x + 'px';
+        no.style.top = y + 'px';
+      });
+
+      yes.onclick = () => {
+        q++;
+        if (q < questions.length) { renderQuestion(); }
+        else {
+          document.getElementById('questionSection').style.display = 'none';
+          document.getElementById('final').style.display = 'block';
+          window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+      };
+      btns.appendChild(yes);
+      btns.appendChild(no);
+    }
+    renderQuestion();
+  </script>
+</body>
+
+</html>
